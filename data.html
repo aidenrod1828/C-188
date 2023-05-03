@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title color="white">Firework Particles</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-spe-particles-component@1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-sky color="aqua"></a-sky>
+            <a-camera position="0 0 30"></a-camera>
+            <a-assets>
+                <img id="abc" src="sky.jpg">
+            </a-assets>
+            <a-entity position="0 1 0" 
+                spe-particles="
+                    color:yellow, red, cyan, black;
+                    distribution:sphere;
+                    randomize-velocity:true;
+                    radius:10;
+                    particle-count:10000;
+                    velocity:5;
+                    velocity-spread:150;
+                    drag:1;
+                    max-age:2;
+                    duration:-100;
+                    blending:additive;
+                    active-multiplier:1000;
+                    size:1,1,1,0
+                "
+            ></a-entity>
+            <a-entity position="-50 1 0" 
+                spe-particles="
+                    color:blue, orange, green, pink;
+                    distribution:sphere;
+                    randomize-velocity:true;
+                    radius:10;
+                    particle-count:10000;
+                    velocity:5;
+                    velocity-spread:150;
+                    drag:1;
+                    max-age:2;
+                    duration:-100;
+                    blending:additive;
+                    active-multiplier:100000000000;
+                    size:1,1,1,0
+                "
+            ></a-entity>
+            <a-entity position="50 1 0" 
+                spe-particles="
+                    color:blue, orange, green, pink;
+                    distribution:sphere;
+                    randomize-velocity:true;
+                    radius:10;
+                    particle-count:10000;
+                    velocity:5;
+                    velocity-spread:150;
+                    drag:1;
+                    max-age:2;
+                    duration:-100;
+                    blending:additive;
+                    active-multiplier:1000;
+                    size:1,1,1,0
+                "
+            ></a-entity>
+            <a-entity>
+                <!--Head-->
+                <a-box color="tan" depth="2" height="4" width="4" position="0 10 0"></a-box>
+                <!--Body-->
+                <a-box color="white" depth="2" height="8" width="4" position="0 4 0"></a-box>
+                <!--Arms-->
+                <a-box color="white" depth="2" height="7" width="2" position="-3.2 4.5 -0.5" rotation="0 -15 -15"></a-box>
+                <a-box color="white" depth="2" height="7" width="2" position="3.2 4.5 -0.5" rotation="0 15 15"></a-box>
+                <!--Eyes-->
+                <a-box color="aqua" depth="1" height="0.5" width="0.5" position="-.5 9.5 0.5"></a-box>
+                <a-box color="white" depth="1" height="0.5" width="0.5" position="-1 9.5 0.5"></a-box>
+                <a-box color="aqua" depth="1" height="0.5" width="0.5" position=".5 9.5 0.5"></a-box>
+                <a-box color="white" depth="1" height="0.5" width="0.5" position="1 9.5 0.5"></a-box>
+                <!--Hair(8)-->
+                <a-box color="black" depth="1" height="2.5" width="0.5" position="-1.75 10.5 1.4"></a-box>
+                <a-box color="black" depth="1" height="2.2" width="0.5" position="-1.25 10.9 1"></a-box>
+                <a-box color="black" depth="1" height="2" width="0.5" position="-.75 10.65 1.4"></a-box>
+                <a-box color="black" depth="1" height="2.1" width="0.5" position="-.25 10.8 1"></a-box>
+                <a-box color="black" depth="1" height="2.5" width="0.5" position="1.75 10.5 1.4"></a-box>
+                <a-box color="black" depth="1" height="2.2" width="0.5" position="1.25 10.9 1"></a-box>
+                <a-box color="black" depth="1" height="2" width="0.5" position=".75 10.9 1.4"></a-box>
+                <a-box color="black" depth="1" height="2.1" width="0.5" position=".25 10.8 1"></a-box>
+
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
